@@ -1,4 +1,4 @@
-package com.totoro.javastudy;
+package com.totoro.javastudy.reflect;
 
 import com.totoro.javastudy.reflect.Phone;
 
