@@ -4,16 +4,21 @@ import com.totoro.javastudy.service.AppleService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @SpringBootTest
 class JavaStudyApplicationTests {
 
-//    @Resource
-//    AppleService appleService;
+
 
     @Test
     void contextLoads() {
-        AppleService appleService = new AppleService();
-        appleService.test();
+        Map<Object, Object> map = new HashMap<>();
+
+        Apple apple = new Apple(1, map);
+        map.put("aa","aa");
+        System.out.println(apple);
     }
 
 }
