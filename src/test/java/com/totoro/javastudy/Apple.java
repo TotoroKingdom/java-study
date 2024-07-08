@@ -5,6 +5,8 @@ import java.util.Map;
 
 public class Apple {
 
+
+
     private Integer id;
     private Map map;
 
