@@ -1,24 +1,25 @@
 package com.totoro.javastudy.nio;
 
-import java.nio.ByteBuffer;
+
+import java.nio.CharBuffer;
+import java.util.Arrays;
 
 /**
  * @author totoro
- * @date 2024年07月11日 19:10
+ * @date 2024年07月11日 19:52
  * @description
  */
 
 public class CharBufferTest {
     public static void main(String[] args) {
 
-        ByteBuffer buffer = ByteBuffer.allocate(5);
+        CharBuffer buffer = CharBuffer.allocate(10);
+        String hello = new String("hello");
+        buffer.put(hello);
         System.out.println(buffer);
-        buffer.put("tom".getBytes());
-        System.out.println("放入tom三个字符"+buffer);
-        byte b = buffer.get();
-        byte a = buffer.get();
-        byte c = buffer.get();
-        System.out.println(b + " 读取模式：" + buffer);
+        buffer.flip();
+        System.out.println(buffer.get());
+        System.out.println(buffer);
 
     }
 }
