@@ -15,6 +15,8 @@ public class FileChannelTest {
 
         //用流输出和输入
         File file = new File("test.txt");
+
+
         try(FileOutputStream out = new FileOutputStream(file))   {
             FileInputStream in = new FileInputStream("test.txt");
             String data = "喜欢喝可乐";
