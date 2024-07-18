@@ -1,6 +1,8 @@
 package com.totoro.javastudy.proxy.cglib;
 
 
+import net.sf.cglib.proxy.Enhancer;
+
 import java.lang.reflect.Method;
 
 /**
@@ -10,6 +12,16 @@ import java.lang.reflect.Method;
  **/
 public class CGLIBTest {
     public static void main(String[] args) {
+
+
+        Enhancer enhancer = new Enhancer();
+
+        enhancer.setSuperclass(Apple.class);
+        enhancer.setCallback(new ProxyFactory());
+
+        Apple apple = (Apple) enhancer.create();
+
+        apple.apple();
 
 
     }

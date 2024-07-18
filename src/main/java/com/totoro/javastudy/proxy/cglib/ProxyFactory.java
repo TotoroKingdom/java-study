@@ -13,6 +13,8 @@ import java.lang.reflect.Method;
 public class ProxyFactory implements MethodInterceptor {
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-        return null;
+        System.out.println("喜欢喝可乐");
+        Object result = methodProxy.invokeSuper(o, objects);
+        return result;
     }
 }
